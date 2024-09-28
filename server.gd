@@ -4,6 +4,7 @@ extends Node
 func get_port():
 	# Get the environment variable for the port provided by Railway
 	var port_env = OS.get_environment("PORT")
+	print("DEBUG: Environment variable PORT = ", port_env) # Debugging log
 	if port_env != "":
 		return int(port_env)
 	else:
